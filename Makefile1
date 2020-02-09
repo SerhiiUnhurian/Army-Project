@@ -1,0 +1,102 @@
+all: army
+ 
+army: main.o State.o Unit.o Attack.o Soldier.o Rogue.o RogueAttack.o Vampire.o VampireAttack.o Ability.o VampireAbility.o WerewolfAbility.o WolfState.o Werewolf.o Wizard.o MagicState.o SpellBook.o Spell.o Fireball.o FlashHeal.o SpellCaster.o Berserker.o BerserkerState.o Priest.o PriestAttack.o Healer.o Warlock.o WarlockAbility.o Demon.o Necromancer.o NecromancerAttack.o
+	g++ *.o -o main.exe 
+
+main.o: 
+		g++ -c main.cpp
+
+Unit.o:  
+		g++ -c Units/Unit.cpp
+
+State.o: 
+		g++ -c States/State.cpp
+
+Attack.o: 
+		g++ -c Attacks/Attack.cpp
+
+Soldier.o: 
+		g++ -c Units/Soldier.cpp
+
+Rogue.o: 
+		g++ -c Units/Rogue.cpp
+
+RogueAttack.o: 
+		g++ -c Attacks/RogueAttack.cpp
+
+Vampire.o: 
+		g++ -c Units/Vampire.cpp
+
+VampireAttack.o: 
+		g++ -c Attacks/VampireAttack.cpp
+
+Ability.o: 
+		g++ -c Ability/Ability.cpp
+
+VampireAbility.o: 
+		g++ -c Ability/VampireAbility.cpp
+
+WerewolfAbility.o: 
+		g++ -c Ability/WerewolfAbility.cpp
+
+WolfState.o: 
+		g++ -c States/WolfState.cpp
+
+Werewolf.o: 
+		g++ -c Units/Werewolf.cpp
+
+Wizard.o: 
+		g++ -c Spellcasters/Wizard.cpp
+
+MagicState.o: 
+		g++ -c States/MagicState.cpp
+
+SpellBook.o: 
+		g++ -c Spell/SpellBook.cpp
+
+Spell.o: 
+		g++ -c Spell/Spell.cpp
+
+Fireball.o: 
+		g++ -c Spell/Fireball.cpp
+
+FlashHeal.o: 
+		g++ -c Spell/FlashHeal.cpp
+		
+SpellCaster.o: 
+		g++ -c Spellcasters/SpellCaster.cpp
+
+Berserker.o: 
+		g++ -c Units/Berserker.cpp
+
+BerserkerState.o: 
+		g++ -c States/BerserkerState.cpp
+
+Priest.o: 
+		g++ -c Spellcasters/Priest.cpp
+
+PriestAttack.o: 
+		g++ -c Attacks/PriestAttack.cpp
+
+Healer.o: 
+		g++ -c Spellcasters/Healer.cpp
+
+Warlock.o: 
+		g++ -c Spellcasters/Warlock.cpp
+
+WarlockAbility.o: 
+		g++ -c Ability/WarlockAbility.cpp
+
+Demon.o: 
+		g++ -c Units/Demon.cpp
+
+Necromancer.o: 
+		g++ -c Spellcasters/Necromancer.cpp
+
+NecromancerAttack.o: 
+		g++ -c Attacks/NecromancerAttack.cpp
+
+clean: 
+	rm -rf *.o main.exe
+
+# main.o Sate.o Unit.o
